@@ -28,6 +28,11 @@ public class TransactionController {
         return transactionRepository.getTransactionsByIban(iban);
     }
 
+    @GetMapping
+    public List<Transactions> getAll() {
+        return transactionRepository.findAll();
+    }
+
     @PostMapping("/add")
     public ResponseEntity<Long> addTransaction(@RequestBody Transactions transaction) {
         transactionRepository.insertTransaction(
