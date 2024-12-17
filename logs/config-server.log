@@ -114,3 +114,51 @@
 2024-12-17T12:23:04.598-05:00  WARN 14880 --- [config-server] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/master.
 2024-12-17T12:23:04.602-05:00  WARN 14880 --- [config-server] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for master (current ref=refs/remotes/origin/master), remote: null
 2024-12-17T12:23:04.618-05:00  INFO 14880 --- [config-server] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\LAPLEN49\Documents\ms\config-server-repo\ms-customer-dev.properties]' via location 'file:/C:/Users/LAPLEN49/Documents/ms/config-server-repo/'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2024-12-17T12:24:52.763-05:00  INFO 16572 --- [config-server] [           main] c.s.i.c.ConfigServerApplication          : Starting ConfigServerApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 16572 (C:\Users\LAPLEN49\Documents\ms\config-server\config-server\target\config-server-0.0.1-SNAPSHOT.jar started by LAPLEN49 in C:\Users\LAPLEN49\Documents\ms\config-server\config-server)
+2024-12-17T12:24:52.767-05:00  INFO 16572 --- [config-server] [           main] c.s.i.c.ConfigServerApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T12:24:54.376-05:00  INFO 16572 --- [config-server] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ffecd6d0-b73d-3863-8111-f2c32ae27935
+2024-12-17T12:24:55.392-05:00  INFO 16572 --- [config-server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+2024-12-17T12:24:55.420-05:00  INFO 16572 --- [config-server] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T12:24:55.420-05:00  INFO 16572 --- [config-server] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-17T12:24:55.485-05:00  INFO 16572 --- [config-server] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-17T12:24:55.487-05:00  INFO 16572 --- [config-server] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2621 ms
+2024-12-17T12:24:57.544-05:00  INFO 16572 --- [config-server] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path '/'
+2024-12-17T12:24:57.831-05:00  INFO 16572 --- [config-server] [           main] c.s.i.c.ConfigServerApplication          : Started ConfigServerApplication in 5.821 seconds (process running for 6.391)
+2024-12-17T12:25:02.810-05:00  INFO 16572 --- [config-server] [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17T12:25:02.810-05:00  INFO 16572 --- [config-server] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-17T12:25:02.811-05:00  INFO 16572 --- [config-server] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-12-17T12:25:03.132-05:00  INFO 16572 --- [config-server] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Cannot pull from remote null, the working tree is not clean.
+2024-12-17T12:25:03.185-05:00  WARN 16572 --- [config-server] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for master remote: null
+2024-12-17T12:25:03.192-05:00  WARN 16572 --- [config-server] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/master.
+2024-12-17T12:25:03.201-05:00  WARN 16572 --- [config-server] [nio-8888-exec-1] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for master (current ref=refs/remotes/origin/master), remote: null
+2024-12-17T12:25:03.234-05:00  INFO 16572 --- [config-server] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\LAPLEN49\Documents\ms\config-server-repo\ms-transactions-dev.properties]' via location 'file:/C:/Users/LAPLEN49/Documents/ms/config-server-repo/'
+2024-12-17T12:25:15.800-05:00  INFO 16572 --- [config-server] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Cannot pull from remote null, the working tree is not clean.
+2024-12-17T12:25:15.831-05:00  WARN 16572 --- [config-server] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for master remote: null
+2024-12-17T12:25:15.840-05:00  WARN 16572 --- [config-server] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/master.
+2024-12-17T12:25:15.843-05:00  WARN 16572 --- [config-server] [nio-8888-exec-2] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for master (current ref=refs/remotes/origin/master), remote: null
+2024-12-17T12:25:15.859-05:00  INFO 16572 --- [config-server] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\LAPLEN49\Documents\ms\config-server-repo\ms-transactions-dev.properties]' via location 'file:/C:/Users/LAPLEN49/Documents/ms/config-server-repo/'
+2024-12-17T12:25:29.958-05:00  INFO 16572 --- [config-server] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Cannot pull from remote null, the working tree is not clean.
+2024-12-17T12:25:30.021-05:00  WARN 16572 --- [config-server] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for master remote: null
+2024-12-17T12:25:30.036-05:00  WARN 16572 --- [config-server] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/master.
+2024-12-17T12:25:30.042-05:00  WARN 16572 --- [config-server] [nio-8888-exec-4] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for master (current ref=refs/remotes/origin/master), remote: null
+2024-12-17T12:25:30.071-05:00  INFO 16572 --- [config-server] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\LAPLEN49\Documents\ms\config-server-repo\ms-product-dev.properties]' via location 'file:/C:/Users/LAPLEN49/Documents/ms/config-server-repo/'
+2024-12-17T12:25:42.311-05:00  INFO 16572 --- [config-server] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Cannot pull from remote null, the working tree is not clean.
+2024-12-17T12:25:42.323-05:00  WARN 16572 --- [config-server] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for master remote: null
+2024-12-17T12:25:42.328-05:00  WARN 16572 --- [config-server] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/master.
+2024-12-17T12:25:42.330-05:00  WARN 16572 --- [config-server] [nio-8888-exec-6] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for master (current ref=refs/remotes/origin/master), remote: null
+2024-12-17T12:25:42.356-05:00  INFO 16572 --- [config-server] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\LAPLEN49\Documents\ms\config-server-repo\ms-customer-dev.properties]' via location 'file:/C:/Users/LAPLEN49/Documents/ms/config-server-repo/'
+2024-12-17T12:25:56.146-05:00  INFO 16572 --- [config-server] [nio-8888-exec-9] .c.s.e.MultipleJGitEnvironmentRepository : Cannot pull from remote null, the working tree is not clean.
+2024-12-17T12:25:56.161-05:00  WARN 16572 --- [config-server] [nio-8888-exec-9] .c.s.e.MultipleJGitEnvironmentRepository : Could not merge remote for master remote: null
+2024-12-17T12:25:56.167-05:00  WARN 16572 --- [config-server] [nio-8888-exec-9] .c.s.e.MultipleJGitEnvironmentRepository : The local repository is dirty or ahead of origin. Resetting it to origin/master.
+2024-12-17T12:25:56.170-05:00  WARN 16572 --- [config-server] [nio-8888-exec-9] .c.s.e.MultipleJGitEnvironmentRepository : Could not reset to remote for master (current ref=refs/remotes/origin/master), remote: null
+2024-12-17T12:25:56.179-05:00  INFO 16572 --- [config-server] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\LAPLEN49\Documents\ms\config-server-repo\ms-customer-dev.properties]' via location 'file:/C:/Users/LAPLEN49/Documents/ms/config-server-repo/'
