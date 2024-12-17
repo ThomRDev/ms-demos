@@ -44,7 +44,7 @@ BEGIN
 END;
 $$;
 
-select * from get_transaction_by_account_iban('22332')
+--select * from get_transaction_by_account_iban('22332')
 
 
 CREATE OR REPLACE FUNCTION insert_transaction(

@@ -7,7 +7,9 @@ import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.synopsis.customer.formatter.FormatterTransaction;
 import com.synopsis.customer.models.Transaction;
+import com.synopsis.customer.services.IWebClientCustomer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.epoll.EpollChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
@@ -35,22 +37,9 @@ public class CustomerController {
     @Autowired
     CustomerRepository customerRepository;
 
-    private final WebClient.Builder webClientBuilder;
 
-    public CustomerController(WebClient.Builder webClientBuilder) {
-        this.webClientBuilder = webClientBuilder;
-    }
-
-    HttpClient client = HttpClient.create()
-            .option(ChannelOption.CONNECT_TIMEOUT_MILLIS,5000)
-            .option(ChannelOption.SO_KEEPALIVE, true)
-            .option(EpollChannelOption.TCP_KEEPIDLE, 300)
-            .option(EpollChannelOption.TCP_KEEPINTVL,60)
-            .responseTimeout(Duration.ofSeconds(1))
-            .doOnConnected(connection -> {
-                connection.addHandlerLast(new ReadTimeoutHandler(5000, TimeUnit.MILLISECONDS));
-                connection.addHandlerLast(new WriteTimeoutHandler(5000, TimeUnit.MILLISECONDS));
-            });
+    @Autowired
+    private IWebClientCustomer webClientCustomer;
 
 
     @GetMapping()
@@ -100,43 +89,21 @@ public class CustomerController {
         Customer customer = customerRepository.findById(id).get();
 
         List<CustomerProduct> products = customer.getProducts();
-        customer.setTransactions(getTransactions(customer.getIban()));
+        customer.setTransactions(
+                FormatterTransaction.formatter(
+                        webClientCustomer.getListTransaction(customer.getIban())
+                )
+        );
 
         products.forEach(
                 product -> {
-                    String productName = getProductName(product.getProductId());
+                    String productName = webClientCustomer.getProductName(product.getProductId());
                     product.setProductName(productName);
                 }
         );
 
 
         return customer;
-    }
-
-    private String getProductName (long id){
-
-        WebClient build = webClientBuilder.clientConnector(new ReactorClientHttpConnector(client))
-                .baseUrl("http://localhost:8081/api/products")
-                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                .defaultUriVariables(Collections.singletonMap("url","http://localhost:8081/api/products"))
-                .build();
-        JsonNode block = build.method(HttpMethod.GET).uri("/"+ id)
-                .retrieve().bodyToMono(JsonNode.class).block();
-
-        String name = block.get("name").asText();
-        return name;
-    }
-
-    private List<Transaction> getTransactions (String iban) {
-        WebClient build = webClientBuilder.clientConnector(new ReactorClientHttpConnector(client))
-                .baseUrl("http://localhost:8083/api/transactions")
-                .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                .defaultUriVariables(Collections.singletonMap("url","http://localhost:8083/api/transactions"))
-                .build();
-        JsonNode block = build.method(HttpMethod.GET).uri("/"+ iban)
-                .retrieve().bodyToMono(JsonNode.class).block();
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.convertValue(block, objectMapper.getTypeFactory().constructCollectionType(List.class, Transaction.class));
     }
 
     @PutMapping("/update-sp/{id}")

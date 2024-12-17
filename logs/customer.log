@@ -1,0 +1,507 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2024-12-17T12:19:49.760-05:00  INFO 15832 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : Starting CustomerApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 15832 (C:\Users\LAPLEN49\Documents\ms\customer\customer\target\customer-0.0.1-SNAPSHOT.jar started by LAPLEN49 in C:\Users\LAPLEN49\Documents\ms\customer\customer)
+2024-12-17T12:19:49.764-05:00  INFO 15832 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T12:19:49.820-05:00  INFO 15832 --- [customer] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-12-17T12:19:49.820-05:00  INFO 15832 --- [customer] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=ms-customer, profiles=[dev], label=null, version=0a17c685dd23086d0a06cb8070fbabdd963cbc20, state=
+2024-12-17T12:19:51.200-05:00  INFO 15832 --- [customer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T12:19:51.504-05:00  INFO 15832 --- [customer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 275 ms. Found 1 JPA repository interface.
+2024-12-17T12:19:51.778-05:00  INFO 15832 --- [customer] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a6e7f0e1-6c13-3b2d-804f-845d27ff67b4
+2024-12-17T12:19:52.461-05:00  INFO 15832 --- [customer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-12-17T12:19:52.480-05:00  INFO 15832 --- [customer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T12:19:52.480-05:00  INFO 15832 --- [customer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-17T12:19:52.535-05:00  INFO 15832 --- [customer] [           main] o.a.c.c.C.[.[.[/ms-customer/v1]          : Initializing Spring embedded WebApplicationContext
+2024-12-17T12:19:52.538-05:00  INFO 15832 --- [customer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2711 ms
+2024-12-17T12:19:52.772-05:00  INFO 15832 --- [customer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T12:19:52.893-05:00  INFO 15832 --- [customer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-17T12:19:52.951-05:00  INFO 15832 --- [customer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T12:19:53.418-05:00  INFO 15832 --- [customer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T12:19:53.469-05:00  INFO 15832 --- [customer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-17T12:19:53.733-05:00  INFO 15832 --- [customer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@148fca83
+2024-12-17T12:19:53.735-05:00  INFO 15832 --- [customer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-17T12:19:53.778-05:00  WARN 15832 --- [customer] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-17T12:19:53.805-05:00  INFO 15832 --- [customer] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-17T12:19:55.065-05:00  INFO 15832 --- [customer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T12:19:55.149-05:00  INFO 15832 --- [customer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T12:19:55.808-05:00  INFO 15832 --- [customer] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-17T12:19:56.701-05:00  WARN 15832 --- [customer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-17T12:19:58.270-05:00  INFO 15832 --- [customer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/ms-customer/v1'
+2024-12-17T12:19:58.595-05:00  INFO 15832 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : Started CustomerApplication in 10.735 seconds (process running for 11.49)
+2024-12-17T12:20:11.489-05:00  INFO 15832 --- [customer] [nio-8082-exec-1] o.a.c.c.C.[.[.[/ms-customer/v1]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17T12:20:11.490-05:00  INFO 15832 --- [customer] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-17T12:20:11.492-05:00  INFO 15832 --- [customer] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: select c1_0.id,c1_0.address,c1_0.code,c1_0.iban,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 where c1_0.id=?
+2024-12-17T12:20:12.027-05:00  WARN 15832 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [fff5eb05] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPIDLE' for channel '[id: 0xfff5eb05]'
+2024-12-17T12:20:12.027-05:00  WARN 15832 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [fff5eb05] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPINTVL' for channel '[id: 0xfff5eb05]'
+2024-12-17T12:20:12.495-05:00 ERROR 15832 --- [customer] [nio-8082-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/ms-customer/v1] threw exception [Request processing failed: org.springframework.web.reactive.function.client.WebClientResponseException$NotFound: 404 Not Found from GET http://localhost:8083/api/transactions22332] with root cause
+
+org.springframework.web.reactive.function.client.WebClientResponseException$NotFound: 404 Not Found from GET http://localhost:8083/api/transactions22332
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:324) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? 404 NOT_FOUND from GET http://localhost:8083/api/transactions22332 [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:324) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:413) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:455) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:509) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:817) ~[reactor-netty-http-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:104) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.Mono.block(Mono.java:1779) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at com.synopsis.customer.services.impl.WebClientCustomer.getListTransaction(WebClientCustomer.java:73) ~[!/:0.0.1-SNAPSHOT]
+		at com.synopsis.customer.controllers.CustomerController.getFull(CustomerController.java:94) ~[!/:0.0.1-SNAPSHOT]
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+		at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2024-12-17T12:23:05.323-05:00  INFO 16744 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : Starting CustomerApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 16744 (C:\Users\LAPLEN49\Documents\ms\customer\customer\target\customer-0.0.1-SNAPSHOT.jar started by LAPLEN49 in C:\Users\LAPLEN49\Documents\ms\customer\customer)
+2024-12-17T12:23:05.326-05:00  INFO 16744 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T12:23:05.380-05:00  INFO 16744 --- [customer] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-12-17T12:23:05.380-05:00  INFO 16744 --- [customer] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=ms-customer, profiles=[dev], label=null, version=0a17c685dd23086d0a06cb8070fbabdd963cbc20, state=
+2024-12-17T12:23:06.531-05:00  INFO 16744 --- [customer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T12:23:06.751-05:00  INFO 16744 --- [customer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 202 ms. Found 1 JPA repository interface.
+2024-12-17T12:23:07.001-05:00  INFO 16744 --- [customer] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a6e7f0e1-6c13-3b2d-804f-845d27ff67b4
+2024-12-17T12:23:07.604-05:00  INFO 16744 --- [customer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-12-17T12:23:07.623-05:00  INFO 16744 --- [customer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T12:23:07.624-05:00  INFO 16744 --- [customer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-17T12:23:07.677-05:00  INFO 16744 --- [customer] [           main] o.a.c.c.C.[.[.[/ms-customer/v1]          : Initializing Spring embedded WebApplicationContext
+2024-12-17T12:23:07.679-05:00  INFO 16744 --- [customer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2294 ms
+2024-12-17T12:23:07.918-05:00  INFO 16744 --- [customer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T12:23:08.039-05:00  INFO 16744 --- [customer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-17T12:23:08.119-05:00  INFO 16744 --- [customer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T12:23:08.578-05:00  INFO 16744 --- [customer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T12:23:08.623-05:00  INFO 16744 --- [customer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-17T12:23:08.822-05:00  INFO 16744 --- [customer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c2a3f0c
+2024-12-17T12:23:08.824-05:00  INFO 16744 --- [customer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-17T12:23:08.870-05:00  WARN 16744 --- [customer] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-17T12:23:08.897-05:00  INFO 16744 --- [customer] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-17T12:23:10.141-05:00  INFO 16744 --- [customer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T12:23:10.220-05:00  INFO 16744 --- [customer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T12:23:10.618-05:00  INFO 16744 --- [customer] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-17T12:23:11.433-05:00  WARN 16744 --- [customer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-17T12:23:13.226-05:00  INFO 16744 --- [customer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/ms-customer/v1'
+2024-12-17T12:23:13.605-05:00  INFO 16744 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : Started CustomerApplication in 10.224 seconds (process running for 10.899)
+2024-12-17T12:23:23.178-05:00  INFO 16744 --- [customer] [nio-8082-exec-1] o.a.c.c.C.[.[.[/ms-customer/v1]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17T12:23:23.179-05:00  INFO 16744 --- [customer] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-17T12:23:23.180-05:00  INFO 16744 --- [customer] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select c1_0.id,c1_0.address,c1_0.code,c1_0.iban,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 where c1_0.id=?
+2024-12-17T12:23:23.646-05:00  WARN 16744 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [258e41c4] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPINTVL' for channel '[id: 0x258e41c4]'
+2024-12-17T12:23:23.647-05:00  WARN 16744 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [258e41c4] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPIDLE' for channel '[id: 0x258e41c4]'
+Hibernate: select p1_0.customer_id,p1_0.id,p1_0.product_id from customer_product p1_0 where p1_0.customer_id=?
+2024-12-17T12:23:24.240-05:00  WARN 16744 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [8f205099] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPINTVL' for channel '[id: 0x8f205099]'
+2024-12-17T12:23:24.240-05:00  WARN 16744 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [8f205099] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPIDLE' for channel '[id: 0x8f205099]'
+2024-12-17T12:23:24.517-05:00 ERROR 16744 --- [customer] [nio-8082-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/ms-customer/v1] threw exception [Request processing failed: org.springframework.web.reactive.function.client.WebClientResponseException$NotFound: 404 Not Found from GET http://localhost:8081/api/products1] with root cause
+
+org.springframework.web.reactive.function.client.WebClientResponseException$NotFound: 404 Not Found from GET http://localhost:8081/api/products1
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:324) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? 404 NOT_FOUND from GET http://localhost:8081/api/products1 [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:324) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onNext(FluxDefaultIfEmpty.java:122) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onNext(FluxMapFuseable.java:299) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:413) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:455) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:509) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:817) ~[reactor-netty-http-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:104) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.Mono.block(Mono.java:1779) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at com.synopsis.customer.services.impl.WebClientCustomer.getProductName(WebClientCustomer.java:57) ~[!/:0.0.1-SNAPSHOT]
+		at com.synopsis.customer.controllers.CustomerController.lambda$getFull$1(CustomerController.java:100) ~[!/:0.0.1-SNAPSHOT]
+		at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+		at com.synopsis.customer.controllers.CustomerController.getFull(CustomerController.java:98) ~[!/:0.0.1-SNAPSHOT]
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+		at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.0)
+
+2024-12-17T12:25:56.705-05:00  INFO 15316 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : Starting CustomerApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 15316 (C:\Users\LAPLEN49\Documents\ms\customer\customer\target\customer-0.0.1-SNAPSHOT.jar started by LAPLEN49 in C:\Users\LAPLEN49\Documents\ms\customer\customer)
+2024-12-17T12:25:56.708-05:00  INFO 15316 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T12:25:56.765-05:00  INFO 15316 --- [customer] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-12-17T12:25:56.765-05:00  INFO 15316 --- [customer] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=ms-customer, profiles=[dev], label=null, version=0a17c685dd23086d0a06cb8070fbabdd963cbc20, state=
+2024-12-17T12:25:57.981-05:00  INFO 15316 --- [customer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T12:25:58.211-05:00  INFO 15316 --- [customer] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 213 ms. Found 1 JPA repository interface.
+2024-12-17T12:25:58.472-05:00  INFO 15316 --- [customer] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a6e7f0e1-6c13-3b2d-804f-845d27ff67b4
+2024-12-17T12:25:59.292-05:00  INFO 15316 --- [customer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2024-12-17T12:25:59.311-05:00  INFO 15316 --- [customer] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T12:25:59.312-05:00  INFO 15316 --- [customer] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-17T12:25:59.370-05:00  INFO 15316 --- [customer] [           main] o.a.c.c.C.[.[.[/ms-customer/v1]          : Initializing Spring embedded WebApplicationContext
+2024-12-17T12:25:59.372-05:00  INFO 15316 --- [customer] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2603 ms
+2024-12-17T12:25:59.618-05:00  INFO 15316 --- [customer] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T12:25:59.778-05:00  INFO 15316 --- [customer] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-17T12:25:59.868-05:00  INFO 15316 --- [customer] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T12:26:01.027-05:00  INFO 15316 --- [customer] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T12:26:01.143-05:00  INFO 15316 --- [customer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-17T12:26:01.437-05:00  INFO 15316 --- [customer] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@51fb5fe6
+2024-12-17T12:26:01.441-05:00  INFO 15316 --- [customer] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-17T12:26:01.504-05:00  WARN 15316 --- [customer] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-17T12:26:01.558-05:00  INFO 15316 --- [customer] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-17T12:26:03.063-05:00  INFO 15316 --- [customer] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T12:26:03.181-05:00  INFO 15316 --- [customer] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T12:26:03.713-05:00  INFO 15316 --- [customer] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-17T12:26:04.608-05:00  WARN 15316 --- [customer] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-17T12:26:06.275-05:00  INFO 15316 --- [customer] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/ms-customer/v1'
+2024-12-17T12:26:06.618-05:00  INFO 15316 --- [customer] [           main] c.synopsis.customer.CustomerApplication  : Started CustomerApplication in 11.75 seconds (process running for 12.266)
+2024-12-17T12:26:11.064-05:00  INFO 15316 --- [customer] [nio-8082-exec-1] o.a.c.c.C.[.[.[/ms-customer/v1]          : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-17T12:26:11.064-05:00  INFO 15316 --- [customer] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-17T12:26:11.065-05:00  INFO 15316 --- [customer] [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Hibernate: select c1_0.id,c1_0.address,c1_0.code,c1_0.iban,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 where c1_0.id=?
+2024-12-17T12:26:11.570-05:00  WARN 15316 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [4004983a] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPIDLE' for channel '[id: 0x4004983a]'
+2024-12-17T12:26:11.571-05:00  WARN 15316 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [4004983a] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPINTVL' for channel '[id: 0x4004983a]'
+Hibernate: select p1_0.customer_id,p1_0.id,p1_0.product_id from customer_product p1_0 where p1_0.customer_id=?
+2024-12-17T12:26:12.213-05:00  WARN 15316 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [4e9b4112] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPIDLE' for channel '[id: 0x4e9b4112]'
+2024-12-17T12:26:12.214-05:00  WARN 15316 --- [customer] [nio-8082-exec-1] r.netty.transport.TransportConnector     : [4e9b4112] Unknown channel option 'io.netty.channel.epoll.EpollChannelOption#TCP_KEEPINTVL' for channel '[id: 0x4e9b4112]'
+2024-12-17T12:26:12.536-05:00 ERROR 15316 --- [customer] [nio-8082-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/ms-customer/v1] threw exception [Request processing failed: org.springframework.web.reactive.function.client.WebClientResponseException$NotFound: 404 Not Found from GET http://localhost:8081/api/products/1] with root cause
+
+org.springframework.web.reactive.function.client.WebClientResponseException$NotFound: 404 Not Found from GET http://localhost:8081/api/products/1
+	at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:324) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: 
+Error has been observed at the following site(s):
+	*__checkpoint ? 404 NOT_FOUND from GET http://localhost:8081/api/products/1 [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.WebClientResponseException.create(WebClientResponseException.java:324) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.reactive.function.client.DefaultClientResponse.lambda$createException$1(DefaultClientResponse.java:214) ~[spring-webflux-6.2.0.jar!/:6.2.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:106) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxOnErrorReturn$ReturnSubscriber.onNext(FluxOnErrorReturn.java:162) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxDefaultIfEmpty$DefaultIfEmptySubscriber.onComplete(FluxDefaultIfEmpty.java:134) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMapFuseable$MapFuseableConditionalSubscriber.onComplete(FluxMapFuseable.java:350) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onComplete(FluxFilterFuseable.java:391) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2098) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.MonoCollect$CollectSubscriber.onComplete(MonoCollect.java:145) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onComplete(FluxPeek.java:260) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.FluxMap$MapSubscriber.onComplete(FluxMap.java:144) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.netty.channel.FluxReceive.onInboundComplete(FluxReceive.java:413) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperations.onInboundComplete(ChannelOperations.java:455) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperations.terminate(ChannelOperations.java:509) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at reactor.netty.http.client.HttpClientOperations.onInboundNext(HttpClientOperations.java:817) ~[reactor-netty-http-1.2.0.jar!/:1.2.0]
+		at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115) ~[reactor-netty-core-1.2.0.jar!/:1.2.0]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289) ~[netty-handler-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346) ~[netty-codec-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318) ~[netty-codec-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar!/:4.1.115.Final]
+		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: java.lang.Exception: #block terminated with an error
+		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:104) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at reactor.core.publisher.Mono.block(Mono.java:1779) ~[reactor-core-3.7.0.jar!/:3.7.0]
+		at com.synopsis.customer.services.impl.WebClientCustomer.getProductName(WebClientCustomer.java:57) ~[!/:0.0.1-SNAPSHOT]
+		at com.synopsis.customer.controllers.CustomerController.lambda$getFull$1(CustomerController.java:100) ~[!/:0.0.1-SNAPSHOT]
+		at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+		at com.synopsis.customer.controllers.CustomerController.getFull(CustomerController.java:98) ~[!/:0.0.1-SNAPSHOT]
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+		at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+		at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+		at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+		at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar!/:6.2.0]
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar!/:6.2.0]
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar!/:na]
+		at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+Hibernate: select c1_0.id,c1_0.address,c1_0.code,c1_0.iban,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 where c1_0.id=?
+Hibernate: select p1_0.customer_id,p1_0.id,p1_0.product_id from customer_product p1_0 where p1_0.customer_id=?
+Hibernate: select c1_0.id,c1_0.address,c1_0.code,c1_0.iban,c1_0.name,c1_0.phone,c1_0.surname from customer c1_0 where c1_0.id=?
+Hibernate: select p1_0.customer_id,p1_0.id,p1_0.product_id from customer_product p1_0 where p1_0.customer_id=?
