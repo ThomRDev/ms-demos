@@ -8,27 +8,27 @@
 
  :: Spring Boot ::                (v3.4.0)
 
-2024-12-17T12:19:22.958-05:00  INFO 4764 --- [product] [           main] c.synopsis.product.ProductApplication    : Starting ProductApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 4764 (C:\Users\LAPLEN49\Documents\ms\product\product\target\product-0.0.1-SNAPSHOT.jar started by LAPLEN49 in C:\Users\LAPLEN49\Documents\ms\product\product)
-2024-12-17T12:19:22.965-05:00  INFO 4764 --- [product] [           main] c.synopsis.product.ProductApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-17T12:19:23.107-05:00  INFO 4764 --- [product] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-12-17T12:19:23.108-05:00  INFO 4764 --- [product] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=ms-product, profiles=[dev], label=null, version=0a17c685dd23086d0a06cb8070fbabdd963cbc20, state=
-2024-12-17T12:19:24.729-05:00  INFO 4764 --- [product] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-17T12:19:24.870-05:00  INFO 4764 --- [product] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interface.
-2024-12-17T12:19:25.249-05:00  INFO 4764 --- [product] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d5b22836-bc44-3402-be40-c76bd92a8792
-2024-12-17T12:19:26.078-05:00  INFO 4764 --- [product] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2024-12-17T12:19:26.104-05:00  INFO 4764 --- [product] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-17T12:19:26.104-05:00  INFO 4764 --- [product] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2024-12-17T12:19:26.185-05:00  INFO 4764 --- [product] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-17T12:19:26.188-05:00  INFO 4764 --- [product] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3074 ms
-2024-12-17T12:19:26.705-05:00  INFO 4764 --- [product] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-17T12:19:26.847-05:00  INFO 4764 --- [product] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
-2024-12-17T12:19:26.920-05:00  INFO 4764 --- [product] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-17T12:19:27.494-05:00  INFO 4764 --- [product] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-17T12:19:27.548-05:00  INFO 4764 --- [product] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-17T12:19:28.033-05:00  INFO 4764 --- [product] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@79295932
-2024-12-17T12:19:28.036-05:00  INFO 4764 --- [product] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-17T12:19:28.088-05:00  WARN 4764 --- [product] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-12-17T12:19:28.124-05:00  INFO 4764 --- [product] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2024-12-17T18:37:34.423-05:00  INFO 19680 --- [ms-product] [           main] c.synopsis.product.ProductApplication    : Starting ProductApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 19680 (C:\Users\LAPLEN49\Documents\ms\product\product\target\product-0.0.1-SNAPSHOT.jar started by LAPLEN49 in C:\Users\LAPLEN49\Documents\ms\product\product)
+2024-12-17T18:37:34.427-05:00  INFO 19680 --- [ms-product] [           main] c.synopsis.product.ProductApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-12-17T18:37:34.512-05:00  INFO 19680 --- [ms-product] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-12-17T18:37:34.513-05:00  INFO 19680 --- [ms-product] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=ms-product, profiles=[dev], label=null, version=b51ee45065546d154d92665156f8f9c3a58f9c1e, state=
+2024-12-17T18:37:36.158-05:00  INFO 19680 --- [ms-product] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-17T18:37:36.461-05:00  INFO 19680 --- [ms-product] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 287 ms. Found 1 JPA repository interface.
+2024-12-17T18:37:37.003-05:00  INFO 19680 --- [ms-product] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=12ed835e-1ae9-3660-b6a0-8f0f92ce36dd
+2024-12-17T18:37:39.356-05:00  INFO 19680 --- [ms-product] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2024-12-17T18:37:39.389-05:00  INFO 19680 --- [ms-product] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-17T18:37:39.389-05:00  INFO 19680 --- [ms-product] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-17T18:37:39.533-05:00  INFO 19680 --- [ms-product] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-17T18:37:39.535-05:00  INFO 19680 --- [ms-product] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5016 ms
+2024-12-17T18:37:40.828-05:00  INFO 19680 --- [ms-product] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-17T18:37:41.004-05:00  INFO 19680 --- [ms-product] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-17T18:37:41.107-05:00  INFO 19680 --- [ms-product] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-17T18:37:41.829-05:00  INFO 19680 --- [ms-product] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-17T18:37:41.904-05:00  INFO 19680 --- [ms-product] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-17T18:37:42.583-05:00  INFO 19680 --- [ms-product] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52d181ed
+2024-12-17T18:37:42.586-05:00  INFO 19680 --- [ms-product] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-17T18:37:42.661-05:00  WARN 19680 --- [ms-product] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-17T18:37:42.717-05:00  INFO 19680 --- [ms-product] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 17.2
@@ -36,106 +36,41 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2024-12-17T12:19:29.493-05:00  INFO 4764 --- [product] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-17T12:19:29.555-05:00  INFO 4764 --- [product] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-17T12:19:30.062-05:00  INFO 4764 --- [product] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-12-17T12:19:31.053-05:00  WARN 4764 --- [product] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-17T12:19:32.821-05:00  INFO 4764 --- [product] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2024-12-17T12:19:33.205-05:00  INFO 4764 --- [product] [           main] c.synopsis.product.ProductApplication    : Started ProductApplication in 13.009 seconds (process running for 13.897)
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
-
- :: Spring Boot ::                (v3.4.0)
-
-2024-12-17T12:22:38.911-05:00  INFO 9916 --- [product] [           main] c.synopsis.product.ProductApplication    : Starting ProductApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 9916 (C:\Users\LAPLEN49\Documents\ms\product\product\target\product-0.0.1-SNAPSHOT.jar started by LAPLEN49 in C:\Users\LAPLEN49\Documents\ms\product\product)
-2024-12-17T12:22:38.916-05:00  INFO 9916 --- [product] [           main] c.synopsis.product.ProductApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-17T12:22:39.029-05:00  INFO 9916 --- [product] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-12-17T12:22:39.029-05:00  INFO 9916 --- [product] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=ms-product, profiles=[dev], label=null, version=0a17c685dd23086d0a06cb8070fbabdd963cbc20, state=
-2024-12-17T12:22:40.718-05:00  INFO 9916 --- [product] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-17T12:22:40.858-05:00  INFO 9916 --- [product] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
-2024-12-17T12:22:41.218-05:00  INFO 9916 --- [product] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d5b22836-bc44-3402-be40-c76bd92a8792
-2024-12-17T12:22:42.236-05:00  INFO 9916 --- [product] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2024-12-17T12:22:42.259-05:00  INFO 9916 --- [product] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-17T12:22:42.259-05:00  INFO 9916 --- [product] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2024-12-17T12:22:42.331-05:00  INFO 9916 --- [product] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-17T12:22:42.333-05:00  INFO 9916 --- [product] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3296 ms
-2024-12-17T12:22:42.761-05:00  INFO 9916 --- [product] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-17T12:22:42.892-05:00  INFO 9916 --- [product] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
-2024-12-17T12:22:42.978-05:00  INFO 9916 --- [product] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-17T12:22:43.583-05:00  INFO 9916 --- [product] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-17T12:22:43.648-05:00  INFO 9916 --- [product] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-17T12:22:44.104-05:00  INFO 9916 --- [product] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6475e778
-2024-12-17T12:22:44.112-05:00  INFO 9916 --- [product] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-17T12:22:44.206-05:00  WARN 9916 --- [product] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-12-17T12:22:44.248-05:00  INFO 9916 --- [product] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.2
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2024-12-17T12:22:46.260-05:00  INFO 9916 --- [product] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-17T12:22:46.313-05:00  INFO 9916 --- [product] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-17T12:22:46.775-05:00  INFO 9916 --- [product] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-12-17T12:22:47.562-05:00  WARN 9916 --- [product] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-17T12:22:48.666-05:00  INFO 9916 --- [product] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2024-12-17T12:22:48.975-05:00  INFO 9916 --- [product] [           main] c.synopsis.product.ProductApplication    : Started ProductApplication in 13.359 seconds (process running for 14.253)
-2024-12-17T12:23:24.324-05:00  INFO 9916 --- [product] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-12-17T12:23:24.325-05:00  INFO 9916 --- [product] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-12-17T12:23:24.327-05:00  INFO 9916 --- [product] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
-
- :: Spring Boot ::                (v3.4.0)
-
-2024-12-17T12:25:31.292-05:00  INFO 17092 --- [product] [           main] c.synopsis.product.ProductApplication    : Starting ProductApplication v0.0.1-SNAPSHOT using Java 17.0.2 with PID 17092 (C:\Users\LAPLEN49\Documents\ms\product\product\target\product-0.0.1-SNAPSHOT.jar started by LAPLEN49 in C:\Users\LAPLEN49\Documents\ms\product\product)
-2024-12-17T12:25:31.297-05:00  INFO 17092 --- [product] [           main] c.synopsis.product.ProductApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-12-17T12:25:31.400-05:00  INFO 17092 --- [product] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-12-17T12:25:31.400-05:00  INFO 17092 --- [product] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=ms-product, profiles=[dev], label=null, version=0a17c685dd23086d0a06cb8070fbabdd963cbc20, state=
-2024-12-17T12:25:33.265-05:00  INFO 17092 --- [product] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-12-17T12:25:33.405-05:00  INFO 17092 --- [product] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
-2024-12-17T12:25:33.838-05:00  INFO 17092 --- [product] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d5b22836-bc44-3402-be40-c76bd92a8792
-2024-12-17T12:25:34.895-05:00  INFO 17092 --- [product] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2024-12-17T12:25:34.939-05:00  INFO 17092 --- [product] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-12-17T12:25:34.940-05:00  INFO 17092 --- [product] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2024-12-17T12:25:35.044-05:00  INFO 17092 --- [product] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-12-17T12:25:35.047-05:00  INFO 17092 --- [product] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3639 ms
-2024-12-17T12:25:35.477-05:00  INFO 17092 --- [product] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-12-17T12:25:35.586-05:00  INFO 17092 --- [product] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
-2024-12-17T12:25:35.658-05:00  INFO 17092 --- [product] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-12-17T12:25:36.316-05:00  INFO 17092 --- [product] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-12-17T12:25:36.397-05:00  INFO 17092 --- [product] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-12-17T12:25:36.833-05:00  INFO 17092 --- [product] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fb71788
-2024-12-17T12:25:36.836-05:00  INFO 17092 --- [product] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-12-17T12:25:36.894-05:00  WARN 17092 --- [product] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-12-17T12:25:36.932-05:00  INFO 17092 --- [product] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 17.2
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2024-12-17T12:25:38.191-05:00  INFO 17092 --- [product] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-12-17T12:25:38.253-05:00  INFO 17092 --- [product] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-12-17T12:25:38.769-05:00  INFO 17092 --- [product] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-12-17T12:25:39.627-05:00  WARN 17092 --- [product] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-12-17T12:25:40.731-05:00  INFO 17092 --- [product] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2024-12-17T12:25:40.965-05:00  INFO 17092 --- [product] [           main] c.synopsis.product.ProductApplication    : Started ProductApplication in 12.762 seconds (process running for 13.61)
-2024-12-17T12:26:12.300-05:00  INFO 17092 --- [product] [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-12-17T12:26:12.301-05:00  INFO 17092 --- [product] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-12-17T12:26:12.303-05:00  INFO 17092 --- [product] [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-Hibernate: select pe1_0.id,pe1_0.code,pe1_0.name from product_entity pe1_0 where pe1_0.id=?
-Hibernate: select pe1_0.id,pe1_0.code,pe1_0.name from product_entity pe1_0 where pe1_0.id=?
-Hibernate: select pe1_0.id,pe1_0.code,pe1_0.name from product_entity pe1_0 where pe1_0.id=?
+2024-12-17T18:37:44.434-05:00  INFO 19680 --- [ms-product] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-17T18:37:44.512-05:00  INFO 19680 --- [ms-product] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-17T18:37:45.405-05:00  INFO 19680 --- [ms-product] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-12-17T18:37:46.800-05:00  WARN 19680 --- [ms-product] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-17T18:37:51.624-05:00  INFO 19680 --- [ms-product] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-12-17T18:37:51.820-05:00  WARN 19680 --- [ms-product] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-17T18:37:51.858-05:00  INFO 19680 --- [ms-product] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2024-12-17T18:37:52.078-05:00  INFO 19680 --- [ms-product] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-12-17T18:37:52.217-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-12-17T18:37:52.228-05:00  INFO 19680 --- [ms-product] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-12-17T18:37:52.260-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-17T18:37:52.260-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-17T18:37:52.260-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-17T18:37:52.260-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-17T18:37:52.260-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-17T18:37:52.260-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-12-17T18:37:52.260-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-17T18:37:52.832-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-12-17T18:37:52.835-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-12-17T18:37:52.842-05:00  INFO 19680 --- [ms-product] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-12-17T18:37:52.845-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1734478672844 with initial instances count: 0
+2024-12-17T18:37:52.861-05:00  INFO 19680 --- [ms-product] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MS-PRODUCT with eureka with status UP
+2024-12-17T18:37:52.862-05:00  INFO 19680 --- [ms-product] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1734478672862, current=UP, previous=STARTING]
+2024-12-17T18:37:52.864-05:00  WARN 19680 --- [ms-product] [           main] c.n.discovery.InstanceInfoReplicator     : Ignoring onDemand update due to rate limiter
+2024-12-17T18:37:52.914-05:00  INFO 19680 --- [ms-product] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PRODUCT/host.docker.internal:ms-product:8081: registering service...
+2024-12-17T18:37:52.950-05:00  INFO 19680 --- [ms-product] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2024-12-17T18:37:52.951-05:00  INFO 19680 --- [ms-product] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2024-12-17T18:37:53.018-05:00  INFO 19680 --- [ms-product] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MS-PRODUCT/host.docker.internal:ms-product:8081 - registration status: 204
+2024-12-17T18:37:53.279-05:00  INFO 19680 --- [ms-product] [           main] c.synopsis.product.ProductApplication    : Started ProductApplication in 22.13 seconds (process running for 23.877)
+2024-12-17T18:37:53.405-05:00  WARN 19680 --- [ms-product] [gistrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=ms-product, managementUrl=http://host.docker.internal:8081/actuator, healthUrl=http://host.docker.internal:8081/actuator/health, serviceUrl=http://host.docker.internal:8081/) at spring-boot-admin ([http://localhost:8062/instances]): I/O error on POST request for "http://localhost:8062/instances": Connect to http://localhost:8062 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information. Further attempts are logged on DEBUG level
+2024-12-17T18:38:22.910-05:00  INFO 19680 --- [ms-product] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-12-17T18:38:22.910-05:00  INFO 19680 --- [ms-product] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-12-17T18:38:22.911-05:00  INFO 19680 --- [ms-product] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-12-17T18:38:22.934-05:00  INFO 19680 --- [ms-product] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-12-17T18:38:22.954-05:00  INFO 19680 --- [ms-product] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-12-17T18:38:22.957-05:00  INFO 19680 --- [ms-product] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2024-12-17T18:38:22.957-05:00  INFO 19680 --- [ms-product] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-12-17T18:38:22.987-05:00  INFO 19680 --- [ms-product] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
