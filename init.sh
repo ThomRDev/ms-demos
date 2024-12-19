@@ -34,23 +34,23 @@ mvn clean install package
 java -jar "$BASE_DIR/transactions/transactions/target/transactions-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/transactions.log" 2>&1 &
 
 
-### PRODUCTS
+# ### PRODUCTS
 cd "$BASE_DIR/product/product"
 mvn clean install package
 java -jar "$BASE_DIR/product/product/target/product-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/product.log" 2>&1 &
 
-# ### CUSTOMER
+# # ### CUSTOMER
 cd "$BASE_DIR/customer/customer"
 mvn clean install package
 java -jar "$BASE_DIR/customer/customer/target/customer-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/customer.log" 2>&1 &
 
-# ### keycloack
+# # ### keycloack
 cd "$BASE_DIR/keycloackAdapter/keycloackAdapter"
 mvn clean install package
 java -jar "$BASE_DIR/keycloackAdapter/keycloackAdapter/target/keycloack-adapter-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/keycloack-adapter.log" 2>&1 &
 
 
-# ### GATEWAY
+# # ### GATEWAY
 cd "$BASE_DIR/api-gateway/api-gateway"
 mvn clean install package
 java -jar "$BASE_DIR/api-gateway/api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/api-gateway.log" 2>&1 &

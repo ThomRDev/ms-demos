@@ -4,5 +4,8 @@ http://localhost:8091/realms/master/.well-known/openid-configuration
 
 http://localhost:8091/realms/master/protocol/openid-connect/token
 
+
+http://localhost:8888/ms-customer/dev
 # keyclock
 http://localhost:8088/login
+https://github.com/sivaprasadreddy/springboot-kubernetes-youtube-series/blob/main/.github/workflows/build-api.yml
