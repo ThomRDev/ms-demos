@@ -8,6 +8,9 @@ LOG_DIR="$BASE_DIR/logs"
 
 mkdir -p "$LOG_DIR"
 
+cd "$LOG_DIR"
+
+rm *.log
 
 ### EUREKA
 cd "$BASE_DIR/eureka-server/eureka-server"
@@ -15,9 +18,9 @@ mvn clean install package
 java -jar "$BASE_DIR/eureka-server/eureka-server/target/eureka-server-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/eureka-server.log" 2>&1 &
 
 # ### observability
-# cd "$BASE_DIR/observability/observability"
-# mvn clean install package
-# java -jar "$BASE_DIR/observability/observability/target/observability-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/observability.log" 2>&1 &
+cd "$BASE_DIR/observability/observability"
+mvn clean install package
+java -jar "$BASE_DIR/observability/observability/target/observability-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/observability.log" 2>&1 &
 
 
 ### CONFIG SERVER
@@ -41,6 +44,10 @@ cd "$BASE_DIR/customer/customer"
 mvn clean install package
 java -jar "$BASE_DIR/customer/customer/target/customer-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/customer.log" 2>&1 &
 
+# ### keycloack
+cd "$BASE_DIR/keycloackAdapter/keycloackAdapter"
+mvn clean install package
+java -jar "$BASE_DIR/keycloackAdapter/keycloackAdapter/target/keycloack-adapter-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/keycloack-adapter.log" 2>&1 &
 
 
 # ### GATEWAY

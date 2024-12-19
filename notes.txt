@@ -1,0 +1,8 @@
+http://localhost:8091/admin/master/console/
+http://localhost:8091/realms/master/protocol/openid-connect/token
+http://localhost:8091/realms/master/.well-known/openid-configuration
+
+http://localhost:8091/realms/master/protocol/openid-connect/token
+
+# keyclock
+http://localhost:8088/login

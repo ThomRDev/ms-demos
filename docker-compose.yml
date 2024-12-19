@@ -10,6 +10,28 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
- 
+
+##########################################################################     
+#keycloack Server
+##########################################################################  
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    container_name: keycloak_server
+    environment:
+      #KC_DB: postgres
+      #KC_DB_URL: jdbc:postgresql://localhost:5433/fwksynopsis
+      #KC_DB_USERNAME: postgres
+      #KC_DB_PASSWORD: root
+      KC_HOSTNAME: localhost
+      #KC_ADMIN_PASSWORD: admin_password
+      #KEYCLOAK_USER: admin
+      #KEYCLOAK_PASSWORD: admin
+      DB_VENDOR: H2
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+    command: ["start-dev"]
+    ports:
+      - "8091:8080"
+
 volumes:
   postgres_data:

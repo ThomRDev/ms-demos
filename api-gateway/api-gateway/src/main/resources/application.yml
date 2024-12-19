@@ -4,18 +4,17 @@ server:
   port: 8080
 
 logging:
-    level:
-        org.springframework.cloud.gateway: DEBUG
-        reactor.netty.http.client: debug
-
-eureka:
-  client:
-    serviceUrl:
-      defaultzone: http://localhost:8761/eureka
-      register-with-eureka: true
-      healthcheck:
-        enabled: true
-      fetch-registry: true
+  level:
+      org.springframework.cloud.gateway: DEBUG
+      reactor.netty.http.client: debug
+  eureka:
+    client:
+      serviceUrl:
+        defaultzone: http://localhost:8761/eureka
+        register-with-eureka: true
+        healthcheck:
+          enabled: true
+        fetch-registry: true
 
 spring:
   application:
@@ -27,11 +26,26 @@ spring:
           uri: lb://ms-product
           predicates:
             - Path=/api/products/**
+        - id: ms-customer_full
+          uri: lb://ms-customer
+          predicates:
+            - Path=/ms-customer/v1/api/customer/full/**
+          filters:
+            - name: AuthenticationFiltering
         - id: ms-customer
           uri: lb://ms-customer
           predicates:
             - Path=/ms-customer/v1/api/customer/**
+        - id: ms-transactions_add
+          uri: lb://ms-transactions
+          predicates:
+            - Path=/api/transactions/add/**
+            - Method=POST
+          filters:
+            - name: AuthenticationFiltering
         - id: ms-transactions
           uri: lb://ms-transactions
           predicates:
             - Path=/api/transactions/**
+          # filters:
+          #   - name: AuthenticationFiltering
