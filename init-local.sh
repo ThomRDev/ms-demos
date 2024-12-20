@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./stop.sh
+./stop-local.sh
 
 BASE_DIR="$(pwd)"
 

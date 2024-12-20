@@ -1,20 +1,22 @@
 
-
 server:
   port: 8080
 
+
+#Eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER}
+    register-with-eureka: true
+    healthcheck:
+      enabled:  false
+    fetch-registry: true
+
 logging:
   level:
-      org.springframework.cloud.gateway: DEBUG
-      reactor.netty.http.client: debug
-  eureka:
-    client:
-      serviceUrl:
-        defaultzone: http://localhost:8761/eureka
-        register-with-eureka: true
-        healthcheck:
-          enabled: true
-        fetch-registry: true
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty.http.client: DEBUG
 
 spring:
   application:

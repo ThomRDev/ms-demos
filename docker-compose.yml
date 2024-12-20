@@ -1,5 +1,19 @@
+version: '3.8'
 
 services:
+  # Docker Compose creates a virtual network between the services and the DNS name 
+  # used for each service is its name: that’s why it’s possible to use registry-discovery as the hostname.
+  registry-discovery:
+    container_name: id-eureka
+    image: thomrdev/eureka-server:latest
+    ports:
+      - "8761:8761"
+    environment:
+      JAVA_OPTS: "-Xms256M -Xmx256M"
+    networks:
+      - my_network
+
+  # PostgreSQL database
   postgres:
     image: postgres:latest
     environment:
@@ -7,31 +21,112 @@ services:
       POSTGRES_PASSWORD: "root"
       POSTGRES_DB: "fwksynopsis"
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    networks:
+      - my_network
 
-##########################################################################     
-#keycloack Server
-##########################################################################  
+  # Keycloak Server
   keycloak:
     image: quay.io/keycloak/keycloak:latest
     container_name: keycloak_server
     environment:
-      #KC_DB: postgres
-      #KC_DB_URL: jdbc:postgresql://localhost:5433/fwksynopsis
-      #KC_DB_USERNAME: postgres
-      #KC_DB_PASSWORD: root
-      KC_HOSTNAME: localhost
-      #KC_ADMIN_PASSWORD: admin_password
-      #KEYCLOAK_USER: admin
-      #KEYCLOAK_PASSWORD: admin
+      # KC_HOSTNAME: localhost
       DB_VENDOR: H2
       KC_BOOTSTRAP_ADMIN_USERNAME: admin
       KC_BOOTSTRAP_ADMIN_PASSWORD: admin
     command: ["start-dev"]
     ports:
       - "8091:8080"
+    networks:
+      - my_network
+
+  # Configuration service
+  config-server:
+    container_name: config-server
+    image: thomrdev/config-server
+    # volumes:
+      # Use a local GitHub repository
+      # - ./config-server-repo:/tmp/config-server-repo
+    environment:
+      # JAVA_OPTS: "-Xms256M -Xmx256M -DLOCAL_REPOSITORY=/tmp/config-server-repo -DEUREKA_SERVER=http://registry-discovery:8761/eureka/"
+      # JAVA_OPTS: "-Xms256M -Xmx256M -DGH_USERNAME= -DGH_SECRET_TOKEN= -DGH_CONFIG_SERVER_REPO= -DEUREKA_SERVER=http://registry-discovery:8761/eureka/"
+      JAVA_OPTS: "-Xms256M -Xmx256M"
+      GH_USERNAME: 
+      GH_SECRET_TOKEN: 
+      GH_CONFIG_SERVER_REPO: 
+      EUREKA_SERVER: http://registry-discovery:8761/eureka/
+    ports:
+      - "8888:8888"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888/actuator/health"]
+      interval: 10s       # Intervalo entre cada verificación
+      timeout: 5s         # Tiempo máximo para considerar una respuesta
+      retries: 5          # Intentos antes de marcar como "unhealthy"
+      start_period: 30s   # Tiempo inicial para esperar antes de empezar a verificar
+
+    depends_on:
+      - registry-discovery
+    networks:
+      - my_network
+
+  ms-product:
+    container_name: ms-product
+    hostname: ms-product
+    image: thomrdev/ms-product:latest
+    environment:
+      JAVA_OPTS: "-Xms256M -Xmx256M -DPOSTGRES_SERVER=jdbc:postgresql://postgres:5432/fwksynopsis -DCONFIG_SERVER=configserver:http://config-server:8888"
+      EUREKA_SERVER: http://registry-discovery:8761/eureka/ 
+    ports:
+      - "8081:8081"
+    networks:
+      - my_network
+
+  ms-transactions:
+    container_name: ms-transactions
+    image: thomrdev/ms-transactions:latest
+    environment:
+      JAVA_OPTS: "-Xms256M -Xmx256M -DPOSTGRES_SERVER=jdbc:postgresql://postgres:5432/fwksynopsis -DCONFIG_SERVER=configserver:http://config-server:8888"
+      EUREKA_SERVER: http://registry-discovery:8761/eureka/ 
+    ports:
+      - "8083:8083"
+    networks:
+      - my_network
+
+  ms-customer:
+    container_name: ms-customer
+    image: thomrdev/ms-customer:latest
+    environment:
+      JAVA_OPTS: "-Xms256M -Xmx256M -DPOSTGRES_SERVER=jdbc:postgresql://postgres:5432/fwksynopsis -DCONFIG_SERVER=configserver:http://config-server:8888"
+      EUREKA_SERVER: http://registry-discovery:8761/eureka/ 
+    networks:
+      - my_network
+
+  ms-keycloack-adapter:
+    container_name: ms-keycloack-adapter
+    image: thomrdev/ms-keycloack-adapter:latest
+    environment:
+      JAVA_OPTS: "-Xms256M -Xmx256M -DKEYCLOACK_SERVER=http://keycloak:8080/realms/ -DEUREKA_SERVER=http://registry-discovery:8761/eureka/"
+    ports:
+      - "8089:8088"
+    networks:
+      - my_network
+
+  ms-api-gateway:
+    container_name: ms-api-gateway
+    image: thomrdev/ms-api-gateway:latest
+    environment:
+      JAVA_OPTS: "-Xms256M -Xmx256M"
+      EUREKA_SERVER: http://registry-discovery:8761/eureka/ 
+    ports:
+      - "8080:8080"
+    networks:
+      - my_network
 
 volumes:
   postgres_data:
+
+networks:
+  my_network:
+    driver: bridge
