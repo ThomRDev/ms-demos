@@ -51,12 +51,12 @@ services:
       # - ./config-server-repo:/tmp/config-server-repo
     environment:
       # JAVA_OPTS: "-Xms256M -Xmx256M -DLOCAL_REPOSITORY=/tmp/config-server-repo -DEUREKA_SERVER=http://registry-discovery:8761/eureka/"
-      # JAVA_OPTS: "-Xms256M -Xmx256M -DGH_USERNAME= -DGH_SECRET_TOKEN= -DGH_CONFIG_SERVER_REPO= -DEUREKA_SERVER=http://registry-discovery:8761/eureka/"
-      JAVA_OPTS: "-Xms256M -Xmx256M"
-      GH_USERNAME: 
-      GH_SECRET_TOKEN: 
-      GH_CONFIG_SERVER_REPO: 
-      EUREKA_SERVER: http://registry-discovery:8761/eureka/
+      JAVA_OPTS: "-Xms256M -Xmx256M -DGH_USERNAME=ThomRDev -DGH_SECRET_TOKEN= -DGH_CONFIG_SERVER_REPO=https://github.com/ThomRDev/config-server-repo -DEUREKA_SERVER=http://registry-discovery:8761/eureka/"
+      # JAVA_OPTS: "-Xms256M -Xmx256M"
+      # GH_USERNAME: 
+      # GH_SECRET_TOKEN: 
+      # GH_CONFIG_SERVER_REPO: 
+      # EUREKA_SERVER: http://registry-discovery:8761/eureka/
     ports:
       - "8888:8888"
     healthcheck:
@@ -82,6 +82,23 @@ services:
       - "8081:8081"
     networks:
       - my_network
+
+  mc-api:
+    container_name: mc-api
+    hostname: mc-api
+    image: thomrdev/mc-api:latest
+    environment:
+      JAVA_OPTS: "-Xms256M -Xmx256M -DPOSTGRES_SERVER=jdbc:postgresql://postgres:5432/fwksynopsis -DCONFIG_SERVER=configserver:http://config-server:8888"
+      EUREKA_SERVER: http://registry-discovery:8761/eureka/
+      LOGGING_LEVEL_ROOT: INFO
+      # SPRING_LOGGING_PATH: /logs
+      # SPRING_LOGGING_MAX_SIZE: 10MB
+    ports:
+      - "8087:8087"
+    networks:
+      - my_network
+    volumes:
+      - ./logs:/logs
 
   ms-transactions:
     container_name: ms-transactions
