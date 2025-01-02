@@ -51,3 +51,14 @@ spring:
             - Path=/api/transactions/**
           # filters:
           #   - name: AuthenticationFiltering
+        - id: mc-api-add
+          uri: lb://mc-api
+          predicates:
+            - Path=/mc-api/v1/api/external-product/**
+            - Method=POST
+          filters:
+            - name: AuthenticationFiltering
+        - id: mc-api
+          uri: lb://mc-api
+          predicates:
+            - Path=/mc-api/v1/api/external-product/**

@@ -47,6 +47,10 @@ cd "$BASE_DIR/customer/customer"
 ./mvnw clean install package -DskipTests
 docker build -t thomrdev/ms-customer .
 
+cd "$BASE_DIR/mc-api/mc-api"
+./mvnw clean install package -DskipTests
+docker build -t thomrdev/mc-api .
+
 
 cd "$BASE_DIR/keycloackAdapter/keycloackAdapter"
 ./mvnw clean install package -DskipTests

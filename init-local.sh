@@ -44,6 +44,8 @@ cd "$BASE_DIR/customer/customer"
 mvn clean install package
 java -jar "$BASE_DIR/customer/customer/target/customer-0.0.1-SNAPSHOT.jar" >> "$LOG_DIR/customer.log" 2>&1 &
 
+
+
 # # ### keycloack
 cd "$BASE_DIR/keycloackAdapter/keycloackAdapter"
 mvn clean install package
